@@ -1,0 +1,99 @@
+
+!$alt_positive = "#technology"
+!$alt_negative = "#implementation"
+!$alt_neutral  = "#business"
+
+!$alt_odd = "#powderblue"
+!$alt_even = "#technology"
+
+!$grp_function = "#red"
+!$todo = "#plum"
+
+!$try_header_color = "78787878"
+
+
+
+!unquoted procedure $log($from,$lvl,$msg="",$params="",$eMsg="e")
+    !if $showLog
+        $from ->> log : <color indianred><&document> **[$lvl]** $msg </color>
+        !if $params != ""
+            note right #cornsilk
+                !$paramList = %splitstr($params,";")
+                !foreach $item in $paramList
+                !$sep = %strpos($item,":")
+                * **%substr($item,0,$sep) :** %substr($item,$sep+1,%strlen($item)-$sep)
+                !endfor
+                !if $lvl == "ERROR"
+                * **message**: $eMsg
+                !endif
+            end note
+        !endif
+    !endif
+!endprocedure
+
+
+!unquoted procedure $logIfLevel($from,$lvl,$msg="",$params="",$eMsg="e")
+!if $showLog
+opt в логгере включен уровень $lvl
+$log($from,$lvl,$msg,$params,$eMsg)
+end opt
+!endif
+!endprocedure
+
+
+!unquoted procedure $break($condition)
+break#lightpink #pink  $condition
+!endprocedure
+
+
+!unquoted procedure $try($title="")
+!if $showBreaks
+!if $title != ""
+    !$title = "["+$title+"]"
+!endif
+group#$try_header_color try $title
+!endif
+!endprocedure
+
+!unquoted procedure $catch()
+!if $showBreaks
+end group try
+!endif
+!endprocedure
+
+!unquoted procedure $finally()
+!if $showBreaks
+group finally
+!endif
+!endprocedure
+
+!unquoted procedure $final()
+!if $showBreaks
+end group finally
+!endif
+!endprocedure
+
+
+!unquoted procedure $getConfig($who,$what)
+$who -> config ++
+$who  <-- config -- :  $what
+!endprocedure
+
+!unquoted procedure $call($method)
+group#burlywood <color navy>$method
+!endprocedure
+
+!unquoted procedure $exec($where,$what)
+$where ->> $where : $what
+!endprocedure
+
+!unquoted procedure $todoNote($where,$what)
+note over $where $todo : **todo:** $what
+!endprocedure
+
+!unquoted procedure $cursor($participant)
+!if $participant != ""
+!$participant = " of " + $participant
+!endif
+note left $participant #red : <color:gold><size:38><&arrow-right>
+!endprocedure

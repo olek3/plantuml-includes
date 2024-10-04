@@ -1,0 +1,35 @@
+skin rose
+
+scale max 4096*4096
+skinparam defaultfontcolor #brown
+skinparam backgroundcolor transparent
+skinparam arrowfontcolor #0F8C29
+skinparam enumbackgroundcolor #physical
+skinparam class<<enum>>backgroundcolor #physical
+skinparam enumerationbackgroundcolor #red
+
+skinparam nodesep 40
+skinparam ranksep 60
+
+'hide <<enum>>
+'hide <<backend>>
+'hide <<orphan>>
+
+skinparam wrapwidth 350
+skinparam classtitlewrapwidth 200
+hide circle
+hide empty members
+
+left to right direction
+skinparam linetype polyline
+
+skinparam classattributeiconsize 7
+skinparam classattirbutefontstyle plain
+skinparam class<<orphan>>backgroundcolor #coral
+skinparam class<<backend>>backgroundcolor #gold
+skinparam class<<new>>backgroundcolor #DeepSkyBlue
+skinparam class<<справочник>>backgroundcolor  #turquoise
+skinparam class<<reference>>backgroundcolor #Thistle
+skinparam PackageBorderColor #steelblue
+skinparam PackageFontColor  #steelblue
+
