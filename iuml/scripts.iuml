@@ -87,8 +87,15 @@ group#burlywood <color navy>$method
 $where ->> $where : $what
 !endprocedure
 
-!unquoted procedure $todoNote($where,$what)
-note over $where $todo : **todo:** $what
+!unquoted procedure $todoNote($where,$what,$isActive="")
+!if $isActive == ""
+    !$todoColor = $todo
+    !$fontColor = ""
+!else
+    !$todoColor = "#red"
+    !$fontColor = "<color:gold>"
+!endif
+note over $where $todoColor : $fontColor **todo:** $what
 !endprocedure
 
 !unquoted procedure $cursor($participant)
