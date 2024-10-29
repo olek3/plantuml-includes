@@ -15,7 +15,7 @@
 
 !unquoted procedure $log($from,$lvl,$msg="",$params="",$eMsg="e")
     !if $showLog
-        $from ->> log : <color indianred><&document> **[$lvl]** $msg </color>
+        $from -[#indianred]->> log : <color indianred><&document> **[$lvl]** $msg </color>
         !if $params != ""
             note right #cornsilk
                 !$paramList = %splitstr($params,";")
