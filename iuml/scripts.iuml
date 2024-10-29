@@ -11,11 +11,21 @@
 
 !$try_header_color = "78787878"
 
+!$log_color="#blue"
+
+<style>
+.log {
+    arrow {
+        linecolor $log_color
+        linethickness 2
+    }
+}
+</style>
 
 
 !unquoted procedure $log($from,$lvl,$msg="",$params="",$eMsg="e")
     !if $showLog
-        $from ->> log : <color indianred><&document> **[$lvl]** $msg </color>
+        $from ->> log <<log>> : <color $log_color><&document> **[$lvl]** $msg </color>
         !if $params != ""
             note right #cornsilk
                 !$paramList = %splitstr($params,";")
