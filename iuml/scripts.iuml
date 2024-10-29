@@ -15,7 +15,7 @@
 .log {
     arrow {
         linecolor #indianred
-        linethickness 3
+        linethickness 2
     }
 }
 </style>
