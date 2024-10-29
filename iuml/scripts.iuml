@@ -11,7 +11,7 @@
 
 !$try_header_color = "78787878"
 
-!$log_color="#orange"
+!$log_color="#goldenrod"
 
 <style>
 .log {
