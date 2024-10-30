@@ -1,0 +1,10 @@
+skin rose
+skinparam backgroundcolor transparent
+skinparam defaultfontcolor forestgreen
+skinparam maxmessagesize 600
+
+<style>
+note {
+  MaximumWidth 180
+}
+</style>
