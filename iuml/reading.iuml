@@ -3,7 +3,7 @@ skinparam backgroundcolor seashell
 skinparam wrapwidth 100
 left to right direction
 
-skinparam usecase<<place>>backgroundcolor technology
+skinparam usecase<<location>>backgroundcolor technology
 skinparam usecase<<group>>backgroundcolor implementation
 skinparam usecase<<institution>>backgroundcolor tan
 
