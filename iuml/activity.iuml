@@ -18,3 +18,20 @@ note {
   MaximumWidth 250
 }
 </style>
+
+
+!procedure $makeLegend($legendString)
+  !$itemsList = %splitstr($legendString,";")
+  legend top right
+    Участники
+  !foreach $item in $itemsList
+    !$sepPos=%strpos($item,"#")
+    |<%substr($item,$sepPos)>%substr($item,0,$sepPos)|
+  !endfor
+  endLegend
+
+  !foreach $item in $itemsList
+    !$sepPos=%strpos($item,"#")
+    skinparam activity<<%substr($item,0,$sepPos)>>backgroundcolor %substr($item,$sepPos)
+  !endfor
+ !endprocedure
