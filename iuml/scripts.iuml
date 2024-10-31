@@ -116,19 +116,28 @@ note left $participant #red : <color:gold><size:38><&arrow-right>
 !endprocedure
 
 !procedure $makeLegend($legendString,$type="activity",$title="Участники")
+  !$foo = []
   !$itemsList = %splitstr($legendString,";")
+  !foreach $item in $itemsList
+     !$bar = {}
+     !$sepPos=%strpos($item,"#")
+     !$bar = %json_add($bar,color,%substr($item,$sepPos))
+     !$bar = %json_add($bar,item,%substr($item,0,$sepPos))
+     !$foo = %json_add($foo,$bar)
+  !endfor
+
+
   legend top right
     $title
-  !foreach $item in $itemsList
-    !$sepPos=%strpos($item,"#")
-    |<%substr($item,$sepPos)>%substr($item,0,$sepPos)|
-  !endfor
+    !foreach $row in $foo
+  |    <$row.color>   $row.item    |
+    !endfor
   endLegend
 
 !if $type != ""
-  !foreach $item in $itemsList
+  !foreach $row in $foo
     !$sepPos=%strpos($item,"#")
-    skinparam $type<<%substr($item,0,$sepPos)>>backgroundcolor %substr($item,$sepPos)
+    skinparam $type<<$row.item>>backgroundcolor $row.color
   !endfor
 !endif
  !endprocedure

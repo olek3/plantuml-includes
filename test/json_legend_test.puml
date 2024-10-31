@@ -3,13 +3,18 @@
 
 !include ..\iuml\scripts.iuml
 
-$makeLegend("asdf#green;lczod#red")
+$makeLegend("asdf#green;lczod#red",activity,"colors")
 
-autonumber
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+start
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+
+<<asdf>>: come on;
+
+<<lczod>> : Lets go;
+
+:no stereotype;
+
+stop
+
 @enduml
