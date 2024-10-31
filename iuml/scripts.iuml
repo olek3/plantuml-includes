@@ -115,7 +115,7 @@ note over $where $todoColor : $fontColor **todo:** $what
 note left $participant #red : <color:gold><size:38><&arrow-right>
 !endprocedure
 
-!procedure $makeLegend($legendString,$title="Участники")
+!procedure $makeLegend($legendString,$type="activity",$title="Участники")
   !$itemsList = %splitstr($legendString,";")
   legend top right
     $title
@@ -125,8 +125,10 @@ note left $participant #red : <color:gold><size:38><&arrow-right>
   !endfor
   endLegend
 
+!if $type != ""
   !foreach $item in $itemsList
     !$sepPos=%strpos($item,"#")
-    skinparam activity<<%substr($item,0,$sepPos)>>backgroundcolor %substr($item,$sepPos)
+    skinparam $type<<%substr($item,0,$sepPos)>>backgroundcolor %substr($item,$sepPos)
   !endfor
+!endif
  !endprocedure
