@@ -115,20 +115,34 @@ note over $where $todoColor : $fontColor **todo:** $what
 note left $participant #red : <color:gold><size:38><&arrow-right>
 !endprocedure
 
+' создается легенда в правом верхнем углу с названиями элементов и соотвтетствующим цветом
+' формат legendString "elemen1#color1;elemane2#color2;..."
+' если тип не пустой, создаются также skinparam для каждого элемента с соответствующим цветом фона
+' для обратной совместимости по умолчанию тиа activity и заголовок "Участники"
+
+
 !procedure $makeLegend($legendString,$type="activity",$title="Участники")
+  !$legendSet = []
   !$itemsList = %splitstr($legendString,";")
+  !foreach $item in $itemsList
+     !$legendItem = {}
+     !$sepPos=%strpos($item,"#")
+     !$legendItem = %json_add($legendItem,color,%substr($item,$sepPos))
+     !$legendItem = %json_add($legendItem,item,%substr($item,0,$sepPos))
+     !$legendSet = %json_add($legendSet,$bar)
+  !endfor
+
   legend top right
     $title
-  !foreach $item in $itemsList
-    !$sepPos=%strpos($item,"#")
-    |<%substr($item,$sepPos)>%substr($item,0,$sepPos)|
-  !endfor
+    !foreach $row in $legendSet
+  |    <$row.color>   $row.item    |
+    !endfor
   endLegend
 
 !if $type != ""
-  !foreach $item in $itemsList
+  !foreach $row in $legendSet
     !$sepPos=%strpos($item,"#")
-    skinparam $type<<%substr($item,0,$sepPos)>>backgroundcolor %substr($item,$sepPos)
+    skinparam $type<<$row.item>>backgroundcolor $row.color
   !endfor
 !endif
  !endprocedure

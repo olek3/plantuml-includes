@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+!include ..\iuml\scripts.iuml
+
+$makeLegend("asdf#green;lczod#red",activity,"colors")
+
+
+start
+
+
+<<asdf>>: come on;
+
+<<lczod>> : Lets go;
+
+:no stereotype;
+
+stop
+
+@enduml
