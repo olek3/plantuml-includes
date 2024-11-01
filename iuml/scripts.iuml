@@ -129,7 +129,7 @@ note left $participant #red : <color:gold><size:38><&arrow-right>
      !$sepPos=%strpos($item,"#")
      !$legendItem = %json_add($legendItem,color,%substr($item,$sepPos))
      !$legendItem = %json_add($legendItem,item,%substr($item,0,$sepPos))
-     !$legendSet = %json_add($legendSet,$bar)
+     !$legendSet = %json_add($legendSet,$legendItem)
   !endfor
 
   legend top right
