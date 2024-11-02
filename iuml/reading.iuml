@@ -3,8 +3,9 @@ skinparam backgroundcolor seashell
 skinparam wrapwidth 100
 left to right direction
 
-skinparam usecase<<location>>backgroundcolor technology
+skinparam usecase<<event>>usecasebackgroundcolor #technology
+skinparam usecase<<location>>usecasebackgroundcolor #lavender
+skinparam usecase<<institution>>usecasebackgroundcolor #strategy
 skinparam usecase<<group>>backgroundcolor implementation
-skinparam usecase<<institution>>backgroundcolor tan
 
 skinparam actor<<protagonist>>backgroundcolor pink
