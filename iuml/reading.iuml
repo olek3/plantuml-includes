@@ -8,4 +8,4 @@ skinparam usecase<<location>>backgroundcolor lavender
 skinparam usecase<<institution>>backgroundcolor strategy
 skinparam usecase<<group>>backgroundcolor implementation
 
-skinparam actor<<protagonist>>backgroundcolor pink
+skinparam actor<<protagonist>>backgroundcolor magenta
