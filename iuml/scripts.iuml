@@ -93,6 +93,12 @@ $who  <-- config -- :  $what
 group#burlywood <color navy>$method
 !endprocedure
 
+!unquoted procedure $call($entity,$method)
+$entity -> $entity ++ : $method
+!endprocedure
+
+
+
 !unquoted procedure $exec($where,$what)
 $where ->> $where : $what
 !endprocedure
