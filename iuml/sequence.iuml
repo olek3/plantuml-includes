@@ -1,5 +1,3 @@
-skin rose
-skinparam backgroundcolor transparent
 skinparam SequenceGroupBodyBackgroundColor #5F7FaF10
 skinparam sequencegroupbordercolor #4f4f4f
 skinparam sequencegroupborderthickness .5

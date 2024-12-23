@@ -1,0 +1,21 @@
+skin rose
+
+scale max 4096*4096
+
+skinparam defaultfontcolor #brown
+skinparam backgroundcolor transparent
+skinparam arrowfontcolor #0F8C29
+skinparam wrapwidth 180
+skinparam titlefontcolor dodgerblue
+
+
+<style>
+element {
+  MaximumWidth 180
+}
+note {
+  MaximumWidth 250
+}
+</style>
+
+

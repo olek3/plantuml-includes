@@ -1,21 +1,7 @@
-skin rose
 
-skinparam backgroundcolor transparent
-skinparam arrowfontcolor #0F8C29
-skinparam wrapwidth 180
+
 skinparam maxmessagesize 120
 skinparam swimlanebordercolor #steelblue
 skinparam swimlanetitlefontcolor #steelblue
 skinparam partitionbackgroundcolor #EFFFFF60
-skinparam titlefontcolor dodgerblue
-
-
-<style>
-element {
-  MaximumWidth 180
-}
-note {
-  MaximumWidth 250
-}
-</style>
 

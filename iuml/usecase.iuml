@@ -1,13 +1,1 @@
-skin rose
-skinparam backgroundcolor transparent
-skinparam defaultfontcolor forestgreen
-skinparam maxmessagesize 180
-skinparam wrapwidth 180
-
-<style>
-note {
-  MaximumWidth 180
-}
-</style>
-
 left to right direction
