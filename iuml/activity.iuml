@@ -5,3 +5,8 @@ skinparam swimlanebordercolor #steelblue
 skinparam swimlanetitlefontcolor #steelblue
 skinparam partitionbackgroundcolor #EFFFFF60
 
+skinparam activitystartcolor #maroon
+skinparam activitystopcolor #maroon
+skinparam activityendcolor #maroon
+
+skinparam shadowing false
