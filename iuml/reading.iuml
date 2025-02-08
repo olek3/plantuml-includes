@@ -1,5 +1,6 @@
 skin rose
-skinparam backgroundcolor seashell
+skinparam backgroundcolor transparent
+skinparam defaultfontcolor steelblue
 skinparam wrapwidth 100
 left to right direction
 
