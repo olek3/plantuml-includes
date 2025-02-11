@@ -72,15 +72,7 @@ end group try $comment
 !endprocedure
 
 !unquoted procedure $finally()
-!if $showBreaks
-group finally
-!endif
-!endprocedure
-
-!unquoted procedure $final()
-!if $showBreaks
-end group finally
-!endif
+group#$try_header_color finally
 !endprocedure
 
 
@@ -118,7 +110,7 @@ note over $where $todoColor : $fontColor **todo:** $what
 !if $participant != ""
 !$participant = " of " + $participant
 !endif
-note left $participant #red : <color:gold><size:38><&arrow-right>
+note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
 !endprocedure
 
 ' создается легенда в правом верхнем углу с названиями элементов и соотвтетствующим цветом
