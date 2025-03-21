@@ -103,7 +103,11 @@ $where ->> $where : $what
     !$todoColor = "#red"
     !$fontColor = "<color:gold>"
 !endif
-note over $where $todoColor : $fontColor **todo:** $what
+note over $where $todoColor : $fontColor **todo**%n()$what
+!endprocedure
+
+!unquoted procedure $todo(a,b,c="")
+ $todoNote(a,b,c)
 !endprocedure
 
 !unquoted procedure $cursor($participant)
