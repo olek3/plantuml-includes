@@ -2,8 +2,6 @@ skin rose
 
 scale max 4096*4096
 
-!$qcolor = "#indianred"
-
 
 skinparam defaultfontcolor #brown
 skinparam backgroundcolor transparent
@@ -11,7 +9,8 @@ skinparam arrowfontcolor #0F8C29
 skinparam wrapwidth 180
 skinparam titlefontcolor dodgerblue
 
-skinparam note<<q>>backgroundcolor $qcolor
+skinparam note<<q>>backgroundcolor lightsalmon
+skinparam note<<q>>fontcolor navy
 
 <style>
 element {
