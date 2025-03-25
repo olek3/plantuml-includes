@@ -148,3 +148,44 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
   !endfor
 !endif
  !endprocedure
+
+
+!function $wrap($long,$width=40)
+
+    !$text = ""
+
+    !while %strlen($long)>$width
+
+        !$lastSpace = 0
+        !$pos = 1
+
+        !while $pos < $width
+            !if %substr($long,$pos,1) == " "
+                !$lastSpace = $pos
+            !endif
+            !$pos = $pos + 1
+        !endwhile
+
+'        !if $lastSpace == 0
+'            !$lastSpace = $width - 2
+'        !endif
+
+        !$text = $text + %substr($long,0,$lastSpace)
+        !$long = %substr($long,$lastSpace+1)
+
+        !$text = $text + %n()
+
+    !endwhile
+
+    !return $text + $long
+!endfunction
+
+
+!unquoted procedure $qnote($text, $where="right", $stereotype = "q", $mark="question", $wrapWidth=40)
+!if $stereotype != ""
+    !$stereotype = "<<" + $stereotype + ">>"
+!endif
+note $where $stereotype
+<#transparent,transparent>|<:$mark:>| $wrap($text,%eval($wrapWidth)) |
+end note
+!endprocedure
