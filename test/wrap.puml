@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+skin rose
+
+!include ..\iuml\scripts.iuml
+!include ..\iuml\common.iuml
+!include ..\iuml\activity.iuml
+
+start
+:ClickServlet.handleRequest();
+:new page;
+note right <<wide>> : $wrap("Dummy or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have content. Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin.",20)
+
+if (Page.onSecurityCheck) then (true)
+  :Page.onInit();
+  note right: $wrap("short line by default")
+  if (isForward?) then (no)
+    :Process controls;
+    if (continue processing?) then (no)
+      stop
+    endif
+
+    if (isPost?) then (yes)
+      :Page.onPost();
+      note right <<wide>> : "Dummy or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have content. Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin."
+    else (no)
+      :Page.onGet();
+    endif
+    :Page.onRender();
+  endif
+else (false)
+endif
+
+if (do redirect?) then (yes)
+  :redirect process;
+  $qnote(what's the fuck?,$wrapWidth=10)
+else
+  if (do forward?) then (yes)
+    :Forward request;
+  else (no)
+    :Render page template;
+    note right <<q>>
+        <#transparent,transparent>| <:question:> | $wrap("а здесь я сейчас напишу вопросы",10) |
+    end note
+  endif
+endif
+
+stop
+
+@enduml
