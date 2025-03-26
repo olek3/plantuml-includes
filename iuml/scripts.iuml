@@ -150,7 +150,7 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
  !endprocedure
 
 
-!function $wrap($long,$width=40)
+!unquoted function $wrap($long,$width=40)
 
     !$text = ""
 
@@ -165,10 +165,6 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
             !endif
             !$pos = $pos + 1
         !endwhile
-
-'        !if $lastSpace == 0
-'            !$lastSpace = $width - 2
-'        !endif
 
         !$text = $text + %substr($long,0,$lastSpace)
         !$long = %substr($long,$lastSpace+1)
