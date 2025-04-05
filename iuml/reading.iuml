@@ -4,11 +4,13 @@ skinparam defaultfontcolor steelblue
 skinparam wrapwidth 100
 left to right direction
 
+!$male="#forestgreen"
+!$male_protagonist="#lime"
+!$female="#darkgoldenrod"
+!$female_protagonist="#yellow"
+
 skinparam usecase<<event>>backgroundcolor technology
 skinparam usecase<<location>>backgroundcolor lavender
 skinparam usecase<<institution>>backgroundcolor strategy
 skinparam usecase<<group>>backgroundcolor implementation
 
-skinparam actor<<protagonist>>backgroundcolor magenta
-skinparam actor<<ex>>backgroundcolor lightcoral
-skinparam actor<<pet>>backgroundcolor midnightblue

@@ -1,0 +1,32 @@
+@startuml
+
+!include ..\iuml\reading.iuml
+
+
+:he: <<protagonist>> $male_protagonist
+
+:she: <<protagonist>> $female_protagonist
+
+he --> she : special one
+
+someone $male
+otherone $female
+
+(institution) <<institution>>
+(event) <<event>>
+(location) <<location>>
+(group) <<group>>
+
+someone -- (institution)
+(institution) - he
+someone -- (event)
+he - (event)
+
+(location) -- otherone
+group -- otherone
+
+(location) - she
+she - group
+
+
+@enduml
