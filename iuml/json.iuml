@@ -3,12 +3,13 @@
         backgroundcolor transparent
         node {
             linecolor forestgreen
-            backgroundcolor gray
-            fontcolor navy
+            backgroundcolor darkgray
+            fontcolor blue
         }
         arrow{
             linecolor steelblue
+            linethickness 4
         }
-
     }
 </style>
+
