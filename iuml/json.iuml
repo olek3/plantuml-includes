@@ -1,0 +1,14 @@
+<style>
+    jsondiagram {
+        backgroundcolor transparent
+        node {
+            linecolor forestgreen
+            backgroundcolor gray
+            fontcolor navy
+        }
+        arrow{
+            linecolor steelblue
+        }
+
+    }
+</style>
