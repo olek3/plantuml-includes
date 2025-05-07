@@ -3,8 +3,8 @@
         backgroundcolor transparent
         node {
             linecolor forestgreen
-            backgroundcolor gray
-            fontcolor navy
+            backgroundcolor silver
+            fontcolor blue
         }
         arrow{
             linecolor steelblue
