@@ -23,6 +23,11 @@
 </style>
 
 
+!unquoted function $l($expression)
+!return "<latex>"+$expression+"</latex>"
+!endprocedure
+
+
 !unquoted procedure $log($from,$lvl,$msg="",$params="",$eMsg="e")
     !if $showLog
         $from ->> log <<log>> : <color $log_color><&document> **[$lvl]** $msg </color>
@@ -186,6 +191,6 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
     !$stereotype = "<<" + $stereotype + ">>"
 !endif
 note $where $stereotype
-<#transparent,transparent>|<:$mark:>| $wrap($text,%eval($wrapWidth)) |
+<#transparent,transparent>|<:$K:>| $wrap($text,%eval($wrapWidth)) |
 end note
 !endprocedure
