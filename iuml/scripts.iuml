@@ -186,7 +186,7 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
 !endfunction
 
 
-!unquoted procedure $qnote($text="", $where="right", $stereotype = "q", $mark="question", $wrapWidth=40)
+!unquoted procedure $qnote($text, $where="right", $stereotype = "q", $mark="question", $wrapWidth=40)
 !if $stereotype != ""
     !$stereotype = "<<" + $stereotype + ">>"
 !endif
