@@ -187,10 +187,10 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
 
 
 !unquoted procedure $qnote($text, $where="right", $stereotype = "q", $mark="question", $wrapWidth=40)
-!if $stereotype != ""
+!if $stereotype != "" && %substr($stereotype,0,2) != "<<"
     !$stereotype = "<<" + $stereotype + ">>"
 !endif
 note $where $stereotype
-<#transparent,transparent>|<:$K:>| $wrap($text,%eval($wrapWidth)) |
+<#transparent,transparent>|<:$mark:>| $wrap($text,%eval($wrapWidth))|
 end note
 !endprocedure
