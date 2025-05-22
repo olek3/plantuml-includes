@@ -3,10 +3,18 @@
 skinparam maxmessagesize 120
 skinparam swimlanebordercolor #steelblue
 skinparam swimlanetitlefontcolor #steelblue
-skinparam partitionbackgroundcolor #EFFFFF60
 
 skinparam activitystartcolor #maroon
 skinparam activitystopcolor #maroon
 skinparam activityendcolor #maroon
 
 skinparam shadowing false
+
+skinparam arrowfontcolor #orangered
+skinparam defaultfontsize 16
+skinparam arrowfontsize 14
+skinparam partitionbackgroundcolor #dFfFdF30
+
+skinparam partitionfontsize 18
+skinparam partitionfontcolor coral
+
