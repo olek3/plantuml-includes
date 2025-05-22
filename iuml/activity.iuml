@@ -13,8 +13,9 @@ skinparam shadowing false
 skinparam arrowfontcolor #orangered
 skinparam defaultfontsize 16
 skinparam arrowfontsize 14
-skinparam partitionbackgroundcolor #dFfFdF30
+skinparam partitionbackgroundcolor #6F8F6F30
 
 skinparam partitionfontsize 18
 skinparam partitionfontcolor coral
 
+skinparam wrapwidth 260
