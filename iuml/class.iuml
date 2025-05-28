@@ -30,4 +30,4 @@ skinparam PackageBorderColor #steelblue
 skinparam PackageFontColor  #steelblue
 
 class c
-note left %dirpath()
+note left : %dirpath()
