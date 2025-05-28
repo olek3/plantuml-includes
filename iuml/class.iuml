@@ -1,4 +1,4 @@
-!include ./common.iuml
+'!include ./common.iuml
 
 skinparam enumbackgroundcolor #physical
 skinparam class<<enum>>backgroundcolor #physical
@@ -29,3 +29,5 @@ skinparam class<<reference>>backgroundcolor #Thistle
 skinparam PackageBorderColor #steelblue
 skinparam PackageFontColor  #steelblue
 
+class c
+note left %dirpath()
