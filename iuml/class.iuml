@@ -1,4 +1,4 @@
-skin rose
+!include ./common.iuml
 
 skinparam enumbackgroundcolor #physical
 skinparam class<<enum>>backgroundcolor #physical
