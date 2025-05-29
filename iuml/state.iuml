@@ -1,0 +1,14 @@
+left to right direction
+skinparam linetype polyline
+
+skinparam maxmessagesize 120
+
+skinparam activitystartcolor #maroon
+skinparam activityendcolor #maroon
+
+skinparam shadowing false
+
+skinparam defaultfontsize 16
+skinparam arrowfontsize 14
+
+skinparam wrapwidth 120
