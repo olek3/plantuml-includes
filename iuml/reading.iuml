@@ -2,6 +2,7 @@ skin rose
 skinparam backgroundcolor transparent
 skinparam defaultfontcolor steelblue
 skinparam wrapwidth 100
+skinparam maxmessagesize 80
 left to right direction
 
 !$male="#forestgreen"
