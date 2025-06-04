@@ -9,13 +9,4 @@ skinparam sequencebreakgroupbodybackgroundcolor #red
 hide footbox
 hide unlinked
 
-<style>
-note {
-  MaximumWidth 180
-  .wide {
-    MaximumWidth 500
-  }
-}
-</style>
-
 !pragma teoz true
