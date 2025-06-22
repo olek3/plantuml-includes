@@ -15,3 +15,9 @@ skinparam usecase<<location>>backgroundcolor lavender
 skinparam usecase<<institution>>backgroundcolor strategy
 skinparam usecase<<group>>backgroundcolor implementation
 
+skinparam actor<<dead>>bordercolor gray
+skinparam actor<<dead>>shadowing false
+
+skinparam actor<<unnamed>>fontcolor darkgreen
+skinparam actor<<unnamed>>fontstyle italic
+skinparam actor<<unnamed>>fontname times new roman
