@@ -6,9 +6,9 @@ skinparam maxmessagesize 100
 left to right direction
 
 !$male="#forestgreen"
-!$male_protagonist="#lime"
+!$male_protagonist="<<protagonist>> #lime"
 !$female="#darkgoldenrod"
-!$female_protagonist="#yellow"
+!$female_protagonist="<<protagonist>> #yellow"
 
 skinparam usecase<<event>>backgroundcolor technology
 skinparam usecase<<location>>backgroundcolor lavender
