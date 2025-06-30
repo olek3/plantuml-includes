@@ -22,5 +22,8 @@ skinparam actor<<unnamed>>fontcolor forestgreen
 skinparam actor<<unnamed>>fontstyle italic
 skinparam actor<<unnamed>>fontname times new roman
 
-skinparam <<todo>>fontstyle bold
-skinparam <<todo>>fontcolor red
+skinparam actor<<todo>>fontstyle bold
+skinparam actor<<todo>>fontcolor red
+
+skinparam usecase<<todo>>fontstyle bold
+skinparam usecase<<todo>>fontcolor red
