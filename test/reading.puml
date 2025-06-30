@@ -3,17 +3,17 @@
 !include ..\iuml\reading.iuml
 
 
-:he: <<protagonist>> $male_protagonist
+:he:  $male_protagonist
 
-:she: <<protagonist>> $female_protagonist
+:she: <<todo>> $female_protagonist
 
 he --> she : special one
 
-someone $male
+someone <<todo>> $male
 otherone $female
 
 (institution) <<institution>>
-(event) <<event>>
+(event) <<event>><<todo>>
 (location) <<location>>
 (group) <<group>>
 
