@@ -1,0 +1,13 @@
+@startuml
+!include ..\iuml\scripts.iuml
+
+a -> b ++
+
+$exec(b,asdf ;lksdaf lorem ipsum asdf  asd f asdf)
+
+note left : $wrap("asdf ;lksdaf lorem ipsum asdf  asd f asdf",15)
+
+note right: %call_user_func("$wrap", "asdf ;lksdaf lorem ipsum asdf  asd f asdf" ,15)
+
+@enduml
+
