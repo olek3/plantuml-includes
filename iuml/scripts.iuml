@@ -96,8 +96,8 @@ $entity -> $entity ++ : $method
 
 
 
-!unquoted procedure $exec($where,$what)
-$where ->> $where : $what
+!unquoted procedure $exec($where,$what,$wrapWidth=25)
+$where ->> $where : $wrap($what,$wrapWidth)
 !endprocedure
 
 !unquoted procedure $todoNote($where,$what,$isActive="")
