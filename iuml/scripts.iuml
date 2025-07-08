@@ -97,7 +97,7 @@ $entity -> $entity ++ : $method
 
 
 !unquoted procedure $exec($where,$what,$wrapWidth=25)
-$where ->> $where : $wrap($what,$wrapWidth)
+$where ->> $where : %call_user_func($wrap,$what,%intval($wrapWidth))
 !endprocedure
 
 !unquoted procedure $todoNote($where,$what,$isActive="")
@@ -175,14 +175,20 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
 '            !$lastSpace = $width - 2
 '        !endif
 
+        !if %strlen($text) > 0
+            !$text = $text + %n()
+        !endif
+
         !$text = $text + %substr($long,0,$lastSpace)
         !$long = %substr($long,$lastSpace+1)
 
-        !$text = $text + %n()
 
     !endwhile
+    !if %strlen($long) > 0
+        !$text = $text + %n() + $long
+    !endif
 
-    !return $text + $long
+    !return $text
 !endfunction
 
 
