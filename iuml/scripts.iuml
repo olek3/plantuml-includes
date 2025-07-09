@@ -197,6 +197,6 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
     !$stereotype = "<<" + $stereotype + ">>"
 !endif
 note $where $stereotype
-<#transparent,transparent>|<:$mark:>| $wrap($text,%eval($wrapWidth))|
+<#transparent,transparent>|<:$mark:>|%call_user_func($wrap,$text,%intval($wrapWidth))|
 end note
 !endprocedure
