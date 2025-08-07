@@ -27,3 +27,5 @@ skinparam actor<<todo>>fontcolor red
 
 skinparam usecase<<todo>>fontstyle bold
 skinparam usecase<<todo>>fontcolor red
+
+skinparam actor<<mentioned>>borderstyle dotted
