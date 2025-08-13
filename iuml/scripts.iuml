@@ -96,7 +96,7 @@ $entity -> $entity ++ : $method
 
 
 
-!unquoted procedure $exec($where,$what,$wrapWidth=25)
+!unquoted procedure $exec($where,$what,$wrapWidth=45)
 $where ->> $where : %call_user_func($wrap,$what,%intval($wrapWidth))
 !endprocedure
 
