@@ -179,8 +179,9 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
             !$text = $text + %n()
         !endif
 
-        !$text = $text + %substr($long,0,$lastSpace) + " " +  $width + " " + $lastSpace + " " + %strlen($text)
+        !$text = $text + %substr($long,0,$lastSpace)
         !$long = %substr($long,$lastSpace+1)
+
 
     !endwhile
     !if %strlen($long) > 0
