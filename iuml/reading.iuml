@@ -14,6 +14,7 @@ skinparam usecase<<event>>backgroundcolor technology
 skinparam usecase<<location>>backgroundcolor lavender
 skinparam usecase<<institution>>backgroundcolor strategy
 skinparam usecase<<group>>backgroundcolor implementation
+skinparam usecase<<project>>backgroundcolor pink
 
 skinparam actor<<dead>>bordercolor gray
 skinparam actor<<dead>>shadowing false
