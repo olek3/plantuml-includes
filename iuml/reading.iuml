@@ -32,3 +32,5 @@ skinparam usecase<<todo>>fontcolor red
 skinparam actor<<mentioned>>borderstyle dotted
 
 skinparam package<<current>>backgroundcolor technology
+
+skinparam actor<<alias>>bordercolor teal
