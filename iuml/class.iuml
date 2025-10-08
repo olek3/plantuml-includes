@@ -9,6 +9,7 @@ skinparam ranksep 60
 'hide <<backend>>
 'hide <<orphan>>
 
+
 skinparam wrapwidth 350
 skinparam classtitlewrapwidth 200
 hide circle
@@ -24,6 +25,8 @@ skinparam class<<backend>>backgroundcolor #gold
 skinparam class<<new>>backgroundcolor #DeepSkyBlue
 skinparam class<<справочник>>backgroundcolor  #turquoise
 skinparam class<<reference>>backgroundcolor #Thistle
+skinparam class<<system>>backgroundcolor #darkgray
+skinparam class<<todo>>backgroundcolor #lightpink
 skinparam PackageBorderColor #steelblue
 skinparam PackageFontColor  #steelblue
 
