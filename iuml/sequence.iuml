@@ -10,3 +10,4 @@ hide footbox
 hide unlinked
 
 !pragma teoz true
+!pragma sequenceMessageSpan true
