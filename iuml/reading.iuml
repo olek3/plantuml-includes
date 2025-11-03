@@ -34,3 +34,14 @@ skinparam actor<<mentioned>>borderstyle dotted
 skinparam package<<current>>backgroundcolor technology
 
 skinparam actor<<alias>>bordercolor teal
+
+<style>
+.exarrow {
+  linecolor green
+  fontcolor green
+  linestyle 3
+  linethickness 0.5
+}
+</style>
+
+!$ex = "<<exarrow>> : <<ex>>"
