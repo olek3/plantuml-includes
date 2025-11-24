@@ -19,3 +19,8 @@ skinparam partitionfontsize 18
 skinparam partitionfontcolor coral
 
 skinparam wrapwidth 260
+
+skinparam partition<<todo>>backgroundcolor salmon
+skinparam partition<<todo>>fontcolor navajowhite
+skinparam partition<<transaction>>backgroundcolor technology
+skinparam partition<<transaction>>fontcolor navy
