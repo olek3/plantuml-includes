@@ -157,6 +157,12 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
 
 !function $wrap($long,$width=40)
 
+    !$longSplit = %splitstr_regex($long,"(?<=[,.])(?=\S)")
+    !$long=''
+    !foreach $chunk in $longSplit
+        !$long = $long + $chunk + ' '
+    !endfor
+
     !$text = ""
 
     !while %strlen($long)>$width
