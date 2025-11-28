@@ -4,7 +4,11 @@
 '!include ..\iuml\sequence.iuml
 !include ..\iuml\scripts.iuml
 
+title " "
+
 a -> b ++
+
+note left: $diagramFileName
 
 $qnote("где задается боковое ускорение?",$wrapWidth=10)
 $exec(b,asdf ;lksdaf lorem ipsum asdf  asd f asdf)
