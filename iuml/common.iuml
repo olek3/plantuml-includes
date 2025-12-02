@@ -27,7 +27,7 @@ note {
 
 
 !$diagramFileName = %splitstr(%filename(),'.')
-!if size($diagramFileName) > 0
+!if %size($diagramFileName) > 0
     !$titleString = $diagramFileName[0]
 
     !if %size($diagramFileName) == 3
