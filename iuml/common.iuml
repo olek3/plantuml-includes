@@ -35,7 +35,3 @@ note {
     !endif
     title $titleString
 !endif
-
-note
->>> $diagramFileName <<<
-end note
