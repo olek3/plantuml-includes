@@ -36,3 +36,7 @@ note {
 !endif
 
 'title $titleString
+
+note
+>>> $diagramFileName <<<
+end note
