@@ -23,6 +23,22 @@
 </style>
 
 
+!function $trim($string)
+
+    !$len = %size($string)
+
+    !if $len < 2
+        !return ($string)
+    !endif
+
+    !while $len != 1 && %substr($string,$len-1,1) == " "
+        !$len = $len - 1
+    !endwhile
+!return %substr($string,0,$len)
+!endfunction
+
+
+
 !unquoted function $l($expression)
 !return "<latex>"+$expression+"</latex>"
 !endprocedure
@@ -163,12 +179,12 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
 
 !function $wrap($long,$width=40)
 
-    !$longSplit = %splitstr_regex($long,"(?<=[,.])(?=\S)")
+    !$longSplit = %splitstr_regex($long,"(?<=[,.\(])(?=\S)(?!\))")
     !$long=''
     !foreach $chunk in $longSplit
         !$long = $long + $chunk + ' '
     !endfor
-
+    !$long = $trim($long)
     !$text = ""
 
     !while %strlen($long)>$width
@@ -183,16 +199,18 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
             !$pos = $pos + 1
         !endwhile
 
-'        !if $lastSpace == 0
-'            !$lastSpace = $width - 2
-'        !endif
-
         !if %strlen($text) > 0
             !$text = $text + %n()
         !endif
 
-        !$text = $text + %substr($long,0,$lastSpace)
-        !$long = %substr($long,$lastSpace+1)
+        !if $lastSpace == 0
+            !$text = $text + %substr($long,0,$width)
+            !$long = %substr($long,$width)
+        !else
+            !$text = $text + %substr($long,0,$lastSpace)
+            !$long = %substr($long,$lastSpace+1)
+        !endif
+
 
 
     !endwhile
