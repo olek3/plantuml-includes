@@ -86,11 +86,17 @@ $who -> config ++
 $who  <-- config -- :  $what
 !endprocedure
 
-!unquoted procedure $call($method)
+!unquoted procedure $call($method,$wrapWidth)
+!if $wrapWidth !=0
+    !$method = $wrap($method,$wrapWidth)
+!endif
 group#burlywood <color navy>$method
 !endprocedure
 
-!unquoted procedure $call($entity,$method)
+!unquoted procedure $call($entity,$method,$wrapWidth=0)
+!if $wrapWidth !=0
+    !$method = $wrap($method,$wrapWidth)
+!endif
 $entity -> $entity ++ : $method
 !endprocedure
 
@@ -111,8 +117,11 @@ $where ->> $where : %call_user_func($wrap,$what,%intval($wrapWidth))
 note over $where $todoColor : $fontColor **todo**%n()$what
 !endprocedure
 
-!unquoted procedure $todo(a,b,c="")
- $todoNote(a,b,c)
+!unquoted procedure $todo($a,$b,$c="",$wrapWidth=0)
+    !if $wrapWidth != 0
+        !$b = $wrap($b,$wrapWidth)
+    !endif
+    $todoNote($a,$b,$c)
 !endprocedure
 
 !unquoted procedure $cursor($participant)
