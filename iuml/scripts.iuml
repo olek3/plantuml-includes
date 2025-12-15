@@ -86,7 +86,7 @@ $who -> config ++
 $who  <-- config -- :  $what
 !endprocedure
 
-!unquoted procedure $call($method,$wrapWidth)
+!unquoted procedure $call($method,$wrapWidth=0)
 !if $wrapWidth !=0
     !$method = $wrap($method,$wrapWidth)
 !endif
