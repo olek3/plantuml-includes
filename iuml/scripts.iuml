@@ -86,10 +86,7 @@ $who -> config ++
 $who  <-- config -- :  $what
 !endprocedure
 
-!unquoted procedure $call($method,$wrapWidth=0)
-!if $wrapWidth !=0
-    !$method = $wrap($method,$wrapWidth)
-!endif
+!unquoted procedure $call($method)
 group#burlywood <color navy>$method
 !endprocedure
 
