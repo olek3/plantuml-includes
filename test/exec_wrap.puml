@@ -1,5 +1,5 @@
 @startuml
-!pragma teoz
+
 !include ..\iuml\common.iuml
 '!include ..\iuml\sequence.iuml
 !include ..\iuml\scripts.iuml
@@ -16,9 +16,10 @@ $exec(b,asdf ;lksdaf lorem ipsum asdf  asd f asdf)
 note left : $wrap("asdf ;lksdaf lorem ipsum asdf  asd f asdf",15)
 
 note right: %call_user_func("$wrap", "asdf ;lksdaf lorem ipsum asdf  asd f asdf" ,15)
-
+$call(a,"getVehicleCANParameter(vehicleID,dao,Collections.singletonList(new Long[]{0L,intervals.get(0)[0]}),coef.dependOn.name(),params.getStatLogToken())",70)
                         $todo(b,"getVehicleCANParameter(vehicleID,dao,Collections.singletonList(new Long[]{0L,intervals.get(0)[0]}),coef.dependOn.name(),params.getStatLogToken())",$wrapWidth=50)
 
+note left : $wrap("getVehicleCANParameter(vehicleID,dao,Collections.singletonList(new Long[]{0L,intervals.get(0)[0]}),coef.dependOn.name(),params.getStatLogToken())",30)
 
 @enduml
 
