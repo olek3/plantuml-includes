@@ -10,6 +10,7 @@
 !$todo = "#plum"
 
 !$try_header_color = "78787878"
+!$try_header_font_color = "000"
 
 !$log_color="#dodgerblue"
 
@@ -82,7 +83,7 @@ break#lightpink #pink  $condition
 !if $title != ""
     !$title = "["+$title+"]"
 !endif
-group#$try_header_color try $title
+group#$try_header_color <color:$try_header_font_color>try $title
 !endif
 !endprocedure
 
