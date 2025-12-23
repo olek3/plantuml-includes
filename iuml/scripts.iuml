@@ -87,9 +87,11 @@ group#$try_header_color <color:$try_header_font_color>try $title
 !endif
 !endprocedure
 
-!unquoted procedure $catch($comment="",$breakBlock="")
+!unquoted procedure $catch($comment="",$breakBlockStr="")
 !if $showBreaks
-!if $breakBlock
+!if $breakBlockStr
+!$breakBlocks=%splitstr($breakBlockStr,"`")
+!foreach $breakBlock in $breakBlocks
 !$breakUnBlock= %splitstr($breakBlock,"|")
 !$statements = %splitstr($breakUnBlock[1]+";",";")
 break#lightpink #pink  $breakUnBlock[0]
@@ -97,6 +99,7 @@ break#lightpink #pink  $breakUnBlock[0]
 $statement
 !endfor
 end break
+!endfor
 !endif
 end group try $comment
 !endif
