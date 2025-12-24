@@ -1,7 +1,7 @@
 skinparam SequenceGroupBodyBackgroundColor #5F7FaF28
 skinparam sequencegroupbordercolor #8f8f8f
 skinparam sequencegroupborderthickness .5
-skinparam defaultfontcolor mediumseagreen
+skinparam defaultfontcolor orangered
 skinparam maxmessagesize 600
 skinparam responsemessagebelowarrow true
 skinparam sequencereferencebackgroundcolor application
