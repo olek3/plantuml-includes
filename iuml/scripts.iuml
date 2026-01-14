@@ -202,7 +202,7 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
     !$text = ""
 
     !while %strlen($long)>$width
-
+        !log $long
         !$lastSpace = 0
         !$pos = 1
 
