@@ -27,7 +27,7 @@
 !function $trim($string)
 
     !$len = %size($string)
-!log $len of $string
+!return $len
     !if $len < 2
         !return ($string)
     !endif
@@ -198,7 +198,7 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
     !foreach $chunk in $longSplit
         !$long = $long + $chunk + ' '
     !endfor
-'    !$long = $trim($long)
+    !$long = $trim($long)
     !$text = ""
 
     !while %strlen($long)>$width
