@@ -1,0 +1,5 @@
+!$iconSize = 24
+
+!function $icon($name)
+!return "<size:"+$iconSize + "><&" + $name + ">"
+!endfunction
