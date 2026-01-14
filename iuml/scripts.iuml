@@ -32,7 +32,7 @@
         !return ($string)
     !endif
 
-    !while $len != 1 && %substr($string,$len-1,1) == " "
+    !while $string && $len > 1 && %substr($string,$len - 1,1) == " "
         !$len = $len - 1
     !endwhile
 !return %substr($string,0,$len)
@@ -121,7 +121,7 @@ group#burlywood <color navy>$method
 !endprocedure
 
 !unquoted procedure $call($entity,$method,$wrapWidth=0)
-!if $wrapWidth !=0
+!if $wrapWidth != 0
     !$method = $wrap($method,$wrapWidth)
 !endif
 $entity -> $entity ++ : $method
@@ -202,7 +202,7 @@ note left $participant #red : <color:gold><size:38>cursor <&arrow-right>
     !$text = ""
 
     !while %strlen($long)>$width
-
+        !log $long
         !$lastSpace = 0
         !$pos = 1
 
