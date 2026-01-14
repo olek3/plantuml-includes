@@ -27,12 +27,12 @@
 !function $trim($string)
 
     !$len = %size($string)
-!log $len
+!log $len, $string
     !if $len < 2
         !return ($string)
     !endif
 
-    !while $len != 1 && %substr($string,$len-1,1) == " "
+    !while $len > 1 && %substr($string,$len-1,1) == " "
         !$len = $len - 1
     !endwhile
 !return %substr($string,0,$len)
