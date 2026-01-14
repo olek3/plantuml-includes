@@ -32,7 +32,7 @@
         !return ($string)
     !endif
 
-!return $len-1
+!return $len + 1
 
     !while $string && $len > 1 && %substr($string,$len-1,1) == " "
         !$len = $len - 1
