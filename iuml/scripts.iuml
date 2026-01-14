@@ -27,7 +27,7 @@
 !function $trim($string)
 
     !$len = %size($string)
-
+!log $len
     !if $len < 2
         !return ($string)
     !endif
