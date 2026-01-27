@@ -24,3 +24,4 @@ skinparam partition<<todo>>backgroundcolor salmon
 skinparam partition<<todo>>fontcolor navajowhite
 skinparam partition<<transaction>>backgroundcolor technology
 skinparam partition<<transaction>>fontcolor navy
+skinparam activity<<continuous>>backgroundcolor transparent
