@@ -30,6 +30,7 @@ skinparam usecase<<todo>>fontstyle bold
 skinparam usecase<<todo>>fontcolor red
 
 skinparam actor<<mentioned>>borderstyle dotted
+skinparam group<<mentioned>>borderstyle dotted
 
 skinparam package<<current>>backgroundcolor technology
 
