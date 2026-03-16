@@ -13,3 +13,18 @@
     }
 </style>
 
+!$jsonFIleName=""
+
+!$splitName=%splitstr(%filename(),'.')
+!$i = 0
+
+!while $i < %size($splitName)-1
+    !if %size($jsonFIleName) > 0
+        !$jsonFIleName = $jsonFIleName+'.'
+    !endif
+    !$jsonFIleName = $jsonFIleName+$splitName[$i]
+    !$i = $i + 1
+!endwhile
+!if %file_exists(%dirpath()+"\"+$jsonFIleName)
+!include $jsonFIleName
+!endif
