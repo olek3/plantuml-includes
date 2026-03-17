@@ -9,8 +9,17 @@ skinparam arrowfontcolor #0F8C29
 skinparam wrapwidth 180
 skinparam titlefontcolor dodgerblue
 
-skinparam note<<q>>backgroundcolor lightsalmon
-skinparam note<<q>>fontcolor navy
+skinparam note<<q>> {
+    backgroundcolor lightsalmon
+    fontcolor navy
+}
+
+skinparam note<<code>> {
+    fontcolor mediumslateblue
+    fontstyle bold
+    fontname monospaced
+}
+
 
 <style>
 element {
