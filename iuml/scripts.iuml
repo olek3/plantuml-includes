@@ -110,12 +110,6 @@ end group try $comment
 group#$try_header_color finally
 !endprocedure
 
-
-!unquoted procedure $getConfig($who,$what)
-$who -> config ++
-$who  <-- config -- :  $what
-!endprocedure
-
 !unquoted procedure $call($method)
 group#burlywood <color navy>$method
 !endprocedure
