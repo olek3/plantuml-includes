@@ -120,14 +120,12 @@ $who  <-- config -- :  $what
 group#burlywood <color navy>$method
 !endprocedure
 
-!unquoted procedure $call($entity,$method,$wrapWidth=0)
+!unquoted procedure $call($entity,$method,$wrapWidth=0,$activateColor="")
 !if $wrapWidth != 0
     !$method = $wrap($method,$wrapWidth)
 !endif
-$entity -> $entity ++ : $method
+$entity -> $entity ++ $activateColor : $method
 !endprocedure
-
-
 
 !unquoted procedure $exec($where,$what,$wrapWidth=45)
 $where ->> $where : %call_user_func($wrap,$what,%intval($wrapWidth))

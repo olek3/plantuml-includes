@@ -22,6 +22,9 @@ $call(a,"getVehicleCANParameter(vehicleID,dao,Collections.singletonList(new Long
     $call(a,"getVehicleCANParameter(vehicleID,dao,Collections.singletonList(new Long[]{0L,intervals.get(0)[0]}),coef.dependOn.name(),params.getStatLogToken())",40)
 note left : $wrap("getVehicleCANParameter(vehicleID,dao,Collections.singletonList(new Long[]{0L,intervals.get(0)[0]}),coef.dependOn.name(),params.getStatLogToken())",30)
 
+$call(a,"texte",0,#red)
+$call(a,"textc",$activateColor=#blue)
+
 
 return g
 return d
