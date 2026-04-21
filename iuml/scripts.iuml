@@ -1,15 +1,15 @@
 
-!$alt_positive = "#technology"
-!$alt_negative = "#implementation"
-!$alt_neutral  = "#business"
+!$alt_positive = "#AFFFAF99"
+!$alt_negative = "#FFD2FF99"
+!$alt_neutral  = "#FFFFB599"
 
-!$alt_odd = "#powderblue"
-!$alt_even = "#technology"
+!$alt_odd = "#B0E0E699"
+!$alt_even = "#AFFFAF99"
 
 !$grp_function = "#red"
 !$todo = "#plum"
 
-!$try_header_color = "78787878"
+!$try_header_color = "#78787878"
 !$try_header_font_color = "000"
 
 !$log_color="#dodgerblue"
@@ -94,7 +94,7 @@ group#$try_header_color <color:$try_header_font_color>try $title
 !foreach $breakBlock in $breakBlocks
 !$breakUnBlock= %splitstr($breakBlock,"|")
 !$statements = %splitstr($breakUnBlock[1]+";",";")
-break#lightpink #pink  $breakUnBlock[0]
+break#lightpink #FFC0CB99  $breakUnBlock[0]
 !foreach $statement in $statements
 $statement
 !endfor
