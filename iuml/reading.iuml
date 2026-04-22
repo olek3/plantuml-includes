@@ -43,6 +43,19 @@ skinparam actor<<alias>>bordercolor teal
   linestyle 3
   linethickness 0.5
 }
+
+.protagonist {
+    linethickness 4
+    FontSize 18
+    FontColor darkorange
+}
+
+.narrator {
+  linecolor #orangered
+  linethickness 3
+  FontSize 18
+  FontColor #orangered
+}
 </style>
 
 !$ex = "<<exarrow>> : <<ex>>"
