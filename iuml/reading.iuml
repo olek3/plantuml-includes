@@ -1,6 +1,6 @@
+skin rose
 !include <tupadr3/font-awesome-5/cat>
 
-skin rose
 skinparam backgroundcolor transparent
 skinparam defaultfontcolor steelblue
 skinparam wrapwidth 100
