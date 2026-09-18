@@ -1,3 +1,5 @@
+!include <tupadr3/font-awesome-5/cat>
+
 skin rose
 skinparam backgroundcolor transparent
 skinparam defaultfontcolor steelblue
@@ -36,6 +38,12 @@ skinparam package<<current>>backgroundcolor technology
 
 skinparam actor<<alias>>bordercolor teal
 
+skinparam rectangle<<pet>>backgroundcolor transparent
+skinparam rectangle<<pet>>bordercolor transparent
+skinparam rectangle<<pet>>shadowing false
+
+
+
 <style>
 .exarrow {
   linecolor green
@@ -59,3 +67,14 @@ skinparam actor<<alias>>bordercolor teal
 </style>
 
 !$ex = "<<exarrow>> : <<ex>>"
+
+
+!unquoted procedure $pet($name,$as,$petColor)
+!$wtf = %strpos($petColor,"#")
+!if wtf >= 0 then
+!endif
+!$petColor = %substr($petColor,$wtf+1)
+!$sprite = "<font color="+$petColor+"><$cat></font>" + %n()+ $name
+rectangle "$sprite" as $as <<pet>>
+!endprocedure
+
