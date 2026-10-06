@@ -24,7 +24,7 @@ note {
 }
 </style>
 
-!if SHOW_TITLE
+!if $SHOW_TITLE
 
     !$diagramFileName = %splitstr(%filename(),'.')
     !if %size($diagramFileName) > 0
@@ -34,6 +34,7 @@ note {
             !$titleString = $titleString + " " + $diagramFileName[1] + " diagram"
         !endif
         title $titleString
+'        title $SHOW_TITLE
     !endif
-
 !endif
+
