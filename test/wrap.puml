@@ -1,11 +1,15 @@
 @startuml
 'https://plantuml.com/activity-diagram-beta
 
+'!$SHOW_TITLE = %false()
+'
 skin rose
 
 !include ..\iuml\scripts.iuml
 !include ..\iuml\common.iuml
 !include ..\iuml\activity.iuml
+
+'title "asdf"
 
 start
 :ClickServlet.handleRequest();
