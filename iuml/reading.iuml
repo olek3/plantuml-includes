@@ -69,11 +69,14 @@ skinparam rectangle<<pet>>shadowing false
 !$ex = "<<exarrow>> : <<ex>>"
 
 
-!unquoted procedure $pet($name,$as,$petColor)
+!unquoted procedure $pet($name,$as="",$petColor="")
 !$wtf = %strpos($petColor,"#")
 !if wtf >= 0 then
 !endif
 !$petColor = %substr($petColor,$wtf+1)
+!if $as == ""
+    !$as = $name
+!endif
 !$sprite = "<font color="+$petColor+"><$cat></font>" + %n()+ $name
 rectangle "$sprite" as $as <<pet>>
 !endprocedure
