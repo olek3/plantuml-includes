@@ -28,5 +28,9 @@ group -- otherone
 (location) - she
 she - group
 
+$pet(pet)
+
+pet -- she :pet
+
 
 @enduml
