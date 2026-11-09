@@ -2,6 +2,7 @@ skin rose
 
 scale max 4096*4096
 
+!$ideaCanvas = "#191a1c"
 
 skinparam defaultfontcolor #brown
 skinparam backgroundcolor transparent
