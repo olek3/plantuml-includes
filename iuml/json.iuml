@@ -1,6 +1,10 @@
+!if $BASE_BACKGROUND == ""
+$BASE_BACKGROUND = transparent
+!endif
+
 <style>
     jsondiagram {
-        backgroundcolor transparent
+        backgroundcolor $BASE_BACKGROUND
         node {
             linecolor forestgreen
             backgroundcolor darkgray
