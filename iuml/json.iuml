@@ -1,6 +1,10 @@
+!if $BASE_BACKGROUND == ""
+$BASE_BACKGROUND = transparent
+!endif
+
 <style>
     jsondiagram {
-        backgroundcolor transparent
+        backgroundcolor $BASE_BACKGROUND
         node {
             linecolor forestgreen
             backgroundcolor darkgray
@@ -11,6 +15,10 @@
             linethickness 4
         }
     }
+    highlight {
+        backgroundcolor #paleturquoise
+    }
+
 </style>
 
 !$jsonFIleName=""
@@ -25,6 +33,8 @@
     !$jsonFIleName = $jsonFIleName+$splitName[$i]
     !$i = $i + 1
 !endwhile
-!if %file_exists(%dirpath()+"\"+$jsonFIleName)
+!$dir = %dirpath() + "\"
+
+!if $dir == "\" || %file_exists($dir+$jsonFIleName)
 !include $jsonFIleName
 !endif
