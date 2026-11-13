@@ -11,6 +11,10 @@
             linethickness 4
         }
     }
+    highlight {
+        backgroundcolor #paleturquoise
+    }
+
 </style>
 
 !$jsonFIleName=""
