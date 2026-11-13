@@ -30,3 +30,8 @@ skinparam class<<todo>>backgroundcolor #lightpink
 skinparam PackageBorderColor #steelblue
 skinparam PackageFontColor  #steelblue
 
+skinparam ArrowColor<<B>> #green
+skinparam Arrowthickness<<B>> 4
+
+
+
