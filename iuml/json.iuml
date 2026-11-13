@@ -18,10 +18,6 @@
 </style>
 
 !$jsonFIleName=""
-!$dir = %dirpath() + "\"
-!if $dir == "\"
-    !$dir = ""
-!endif
 
 !$splitName=%splitstr(%filename(),'.')
 !$i = 0
@@ -33,6 +29,11 @@
     !$jsonFIleName = $jsonFIleName+$splitName[$i]
     !$i = $i + 1
 !endwhile
-!if %file_exists($dir+$jsonFIleName)
+!$dir = %dirpath() + "\"
+!if $dir == "\"
+    !$dir = ""
+!endif
+
+!if $dir == "" or %file_exists($dir+$jsonFIleName)
 !include $jsonFIleName
 !endif
