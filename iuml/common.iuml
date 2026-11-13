@@ -4,8 +4,17 @@ scale max 4096*4096
 
 !$ideaCanvas = "#191a1c"
 
+!if $BASE_BACKGROUND == "$BASE_BACKGROUND"
+    !$BASE_BACKGROUND = "transparent"
+!else
+    !if $BASE_BACKGROUND == "$ideaCanvas"
+        !$BASE_BACKGROUND = $ideaCanvas
+    !endif
+!endif
+
+
 skinparam defaultfontcolor #brown
-skinparam backgroundcolor transparent
+skinparam backgroundcolor $BASE_BACKGROUND
 skinparam arrowfontcolor #0F8C29
 skinparam wrapwidth 180
 skinparam titlefontcolor dodgerblue
