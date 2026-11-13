@@ -31,6 +31,6 @@
 !endwhile
 !$dir = %dirpath() + "\"
 
-!if $dir == "\" or %file_exists($dir+$jsonFIleName)
+!if $dir == "\" || %file_exists($dir+$jsonFIleName)
 !include $jsonFIleName
 !endif
