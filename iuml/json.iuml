@@ -30,10 +30,7 @@
     !$i = $i + 1
 !endwhile
 !$dir = %dirpath() + "\"
-!if $dir == "\"
-    !$dir = ""
-!endif
 
-!if $dir == "" or %file_exists($dir+$jsonFIleName)
+!if $dir == "\" or %file_exists($dir+$jsonFIleName)
 !include $jsonFIleName
 !endif
