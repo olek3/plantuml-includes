@@ -1,0 +1,15 @@
+@startuml
+
+'!$BASE_BACKGROUND = $ideaCanvas
+!$ideaCanvas = "#191a1c"
+
+!if $BASE_BACKGROUND == "$BASE_BACKGROUND"
+    !$BASE_BACKGROUND = "transparent"
+!else
+    !if $BASE_BACKGROUND == "$ideaCanvas"
+        !$BASE_BACKGROUND = $ideaCanvas
+    !endif
+!endif
+
+$BASE_BACKGROUND
+@enduml
