@@ -1,0 +1,10 @@
+@startuml
+!include ../iuml/common.iuml
+!include ../iuml/scripts.iuml
+
+skinparam backgroundcolor $ideaCanvas
+a -> b ++ : message
+$todo(a,something very long to wrap,500)
+return reply
+
+@enduml
