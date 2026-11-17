@@ -133,7 +133,7 @@ $where ->> $where : %call_user_func($wrap,$what,%intval($wrapWidth))
     !$todoColor = "#red"
     !$fontColor = "<color:gold>"
 !endif
-note over $where $todoColor : $fontColor **todo**%n()$what
+note over $where $todoColor : $fontColor**todo**%n()$fontColor $what
 !endprocedure
 
 !unquoted procedure $todo($a,$b,$c="",$wrapWidth=0)
