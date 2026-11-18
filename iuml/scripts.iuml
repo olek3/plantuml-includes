@@ -52,11 +52,11 @@
             note right #cornsilk
                 !$paramList = %splitstr($params,";")
                 !foreach $item in $paramList
-                !$sep = %strpos($item,":")
-                * **%substr($item,0,$sep) :** %substr($item,$sep+1,%strlen($item)-$sep)
+                    !$splitParam = %splitstr($item,":")
+                * **$splitParam[0]:** $splitParam[1]
                 !endfor
                 !if $lvl == "ERROR"
-                * **message**: $eMsg
+                * **message:** <color:red>$eMsg
                 !endif
             end note
         !endif

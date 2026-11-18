@@ -7,7 +7,7 @@ a -> b ++ : message
 $todo(a,something very long to wrap,500)
 return reply
 
-$log(b,ERROR,"something","param:value;param3:value","bugaga")
+$log(b,ERROR,"something","param:value;param3:value",)
 
 
 @enduml
